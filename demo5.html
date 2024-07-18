@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 25px;
+            text-align: center;
+            margin-top: 100px;
+        }
+        button{
+            font-size: 3rem;
+            text-align: center;
+        }
+        label{
+            font-size: 3rem;
+        }
+        
+    </style>
+</head>
+<body>
+    <label id="mylable1" class="label"></label><br> <br>
+    <label id="mylable2" class="label"></label><br> <br>
+    <label id="mylable3" class="label"></label><br><br>
+
+    <button id="mybutton">Roll</button>
+
+    <script>
+         const butn = document.getElementById("mybutton");
+
+        const random1 = document.getElementById("mylable1");
+        const random2 = document.getElementById("mylable2");
+        const random3 = document.getElementById("mylable3");
+       
+        let rand1;
+        let rand2;
+        let rand3;
+
+        butn.onclick  = function(){
+            rand1 = Math.floor(Math.random() * 10)
+            rand2 = Math.floor(Math.random() * 100)
+            rand3 = Math.floor(Math.random() * 1000)
+
+            random1.textContent = rand1
+            random2.textContent = rand2
+            random3.textContent = rand3
+        }
+
+        
+    </script>
+</body>
+</html>

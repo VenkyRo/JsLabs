@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1 id="myh1"></h1>
+    <p id="myp1"></p>
+    <p id="myp2"></p>
+    <p id="myp3"></p>
+    <script>
+       let name ="venkatesh";
+       let age = 22;
+       let isStudent= true;
+
+        document.getElementById("myp1").textContent = `Name :${name}`;
+        document.getElementById("myp2").textContent = `Age: ${age}`;
+        document.getElementById("myp3").textContent = `Enrolled: ${isStudent}`;
+
+        let userName = window.prompt("enter userName");
+        console.log(userName);
+
+    </script>
+</body>
+</html>

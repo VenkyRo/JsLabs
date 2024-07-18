@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label{
+            display: block;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 10rem;
+            text-align: center;
+            justify-content: center;
+        }
+        #bodyContainer{
+            text-align: center;
+        }
+        .mybutton{
+           font-size: 1.5em;
+           color: rgb(227, 179, 37);
+           background-color: rgb(36, 165, 176);
+           border-radius: 8px;
+           cursor: pointer;
+           transition: background-color 0.2s;
+           
+        }
+        .mybutton:hover{
+            background-color: rgb(4, 59, 64);
+        }
+
+
+    </style>
+</head>
+<body>
+    <label id="mylable">0</label>
+   <div id="bodyContainer">
+    <button id="Desbutton" class="mybutton">Descrese</button>
+    <button id="Restbutton" class="mybutton">Reset</button>
+    <button id="Incbutton" class="mybutton">Increse</button>
+   </div>
+    <script>
+        const mylab = document.getElementById("mylable");
+        const descbtn = document.getElementById("Desbutton");
+        const restbtn = document.getElementById("Restbutton");
+        const inscbtn = document.getElementById("Incbutton");
+
+        let count = 0;
+
+        descbtn.onclick = function(){
+            count--;
+            mylab.textContent = count;
+            
+        }
+
+        inscbtn.onclick = function(){
+            count++;
+            mylab.textContent = count;
+        }
+
+        restbtn.onclick= function(){
+            count = 0;
+            mylab.textContent = count;
+        }
+       
+       
+
+    </script>
+</body>
+</html>
