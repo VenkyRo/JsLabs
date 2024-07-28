@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST" >
+        <label for="mail">Email: </label>
+        <input type="text" id="mail" name="mail">
+        <br/>
+        <label for="pw">Password: </label>
+        <input type="password" id="pw" name="pw">
+        <br/>
+        <button onclick="show();" id="login">submit</button>
+        <br/>
+        <input type="checkbox" id="ck" name="ck">
+        <label for="ck">Remember me</label>
+
+        <p id="result">show me</p>
+      </form>
+      
+      <script>
+        const mail = document.getElementById("mail");
+        const password = document.getElementById("pw");
+        const login = document.getElementById("login");
+
+        const result = document.getElementById("result");
+
+       function show(){
+        result.textContent=mail;
+       }
+
+        
+
+
+      </script>
+</body>
+</html>

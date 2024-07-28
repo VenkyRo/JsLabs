@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     
+       
+
+    </style>
+</head>
+<body>
+    <h3 id="myh3"> JOSN FILES </h3>
+    <div id="mydiv"> </div>
+
+ 
+    <script>
+
+        function myprint(data){
+        var mydiv = document.getElementById("mydiv");
+         mydiv.innerHTML=mydiv.innerHTML+data +"<br/>";
+        }
+        myprint("hello");
+
+        fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
+        .then(Response => {
+
+            if(!Response.ok){
+                throw new Error ("could not fetch");
+            }
+            return Response.json();
+
+        })
+        .then(data => {console.log(data.name),myprint(data.name),myprint(data.id)})
+        .catch(error =>{console.error(error)});
+    </script>
+    
+</body>
+</html>

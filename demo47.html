@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       #mybut{
+        font-size: 1.5rem;
+        cursor: pointer;
+       }
+       
+
+    </style>
+</head>
+<body>
+    <h3 id="myh3"> EventListener </h3>
+
+    
+  
+
+  <img id="myImg" src="/img/bg.png" width="400px">
+  <button id="mybut">Hide</button>
+
+  
+
+    <script>
+       
+
+
+       const mybut = document.getElementById("mybut");
+       const myimg = document.getElementById("myImg");
+
+       mybut.addEventListener("click",event =>{
+
+        if(myimg.style.visibility === "hidden"){
+            myimg.style.visibility = "visible";
+            mybut.textContent = "Hide";
+        }
+        else{
+            myimg.style.visibility = "hidden";
+            mybut.textContent = "show";
+       }
+
+        });
+       
+
+
+    </script>
+    
+</body>
+</html>

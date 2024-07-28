@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="myh1">Map()</h1>
+    <p id="myp1"></p>
+    <p id="myp2"></p>
+    <p id="myp3"></p>
+
+    <script>
+
+        const students = ["Venkatesh","Roayl","Venkey","Prabash"];
+        const studentsUpper = students.map(UpperCase);
+        const studentsLower = students.map(LowerCase);
+
+        document.getElementById("myp1").textContent=students
+        document.getElementById("myp2").textContent=studentsUpper
+        document.getElementById("myp3").textContent=studentsLower
+
+        console.log(students);
+        console.log(studentsUpper);
+        console.log(studentsLower);
+        
+        function UpperCase(element){
+            return element.toUpperCase();
+        }
+
+        function LowerCase(element){
+            return element.toLowerCase();
+        }
+      
+    </script>
+    
+</body>
+</html>

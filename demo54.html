@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     
+       
+
+    </style>
+</head>
+<body>
+    <h3 id="myh3"> JOSN FILES </h3>
+    <div id="mydiv"> </div>
+
+ 
+    <script>
+
+        function myprint(data){
+        var mydiv = document.getElementById("mydiv");
+         mydiv.innerHTML=mydiv.innerHTML+data +"<br/>";
+        }
+        myprint("hello");
+
+
+        fetch("dperson.json")
+        .then(Response =>Response.json())
+        .then(value => console.log(value));
+
+        
+        fetch("Dpeploe.json")
+        .then(Response =>Response.json())
+        .then(values => values.forEach(element => {
+            console.log(element.isStudent)
+            myprint("name:"+element.name)
+            myprint("age:"+element.age)
+            myprint("isStudent:"+element.isStudent);
+
+        }))
+        .catch(error => {myprint(error)})
+
+    </script>
+    
+</body>
+</html>

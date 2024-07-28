@@ -1,0 +1,91 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div id="mydiv">
+
+    <h3>Multilevel Inheritance:</h3>
+   </div>
+   
+    
+
+    <script>
+        function myprint(data){
+        var mydiv = document.getElementById("mydiv");
+         mydiv.innerHTML=mydiv.innerHTML+data +"<br/>";
+        }
+
+        class Animal{
+            alive = true;
+
+            eat(){
+                myprint(`this ${this.name} is eating`);
+            }
+
+            sleep(){
+                myprint(`this ${this.name} is sleeping`);
+            }
+        }
+
+        class Rabbit extends Animal{
+            name = "rabbit"
+            likes(){
+                myprint(`this ${this.name} likes Carrot`)
+            }
+        }
+        class Fish extends Rabbit{
+            name = "fish"
+
+            ocean(){
+                myprint(`this ${this.name} in ocean`)
+            }
+        }
+        class Lion extends Fish{
+            name = "lion"
+
+            forest(){
+                myprint(` this ${this.name} in forest`);
+            }
+        }
+       
+        const lion = new Lion();
+        myprint(lion.alive);
+        lion.eat();
+        lion.sleep();
+
+        lion.forest();
+        lion.ocean();
+        lion.likes();
+
+
+        myprint("--------------------------");
+
+        const fish = new Fish();
+        myprint(fish.alive);
+        fish.eat();
+        fish.likes();
+        fish.ocean();
+        fish.sleep();
+
+        myprint("---------------------");
+
+        const rabbit = new Rabbit()
+
+        myprint(rabbit.alive);
+        rabbit.eat();
+        rabbit.sleep();
+        rabbit.likes();
+        //rabbit.ocean();
+        //rabbit.forest();
+
+
+
+        
+
+    </script>
+    
+</body>
+</html>

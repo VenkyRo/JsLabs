@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div id="mydiv">
+
+    <h3>Cunstrutors:</h3>
+   </div>
+   
+    
+
+    <script>
+        function myprint(data){
+        var mydiv = document.getElementById("mydiv");
+         mydiv.innerHTML=mydiv.innerHTML+data +"<br/>";
+        }
+
+        function car(make , model, year, color){
+            this.make = make;
+            this.model = model;
+            this.year = year;
+            this.color = color;
+           
+
+        }
+
+        const car1 = new car("ford", "mustang",2023, "red");
+       
+        const car2 = new car("loqmb","cmareo",2024,"blue");
+
+        myprint(car1.make);
+        myprint(car1.model);
+        myprint(car1.year);
+        myprint(car1.color);
+
+        myprint(car2.make);
+        myprint(car2.model);
+        myprint(car2.year);
+        myprint(car2.color);
+       
+       
+
+    </script>
+    
+</body>
+</html>

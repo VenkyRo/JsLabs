@@ -1,0 +1,6 @@
+{
+    "name": "venkatesh",
+    "age": 30,
+    "isStudent": true,
+    "hobbies":["study" ,"reading","webStack"]
+}

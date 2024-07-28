@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div id="mydiv">
+
+    <h3> static Class:</h3>
+   </div>
+   
+    
+
+    <script>
+        function myprint(data){
+        var mydiv = document.getElementById("mydiv");
+         mydiv.innerHTML=mydiv.innerHTML+data +"<br/>";
+        }
+
+        
+        class MathUtil{
+            static PI = 3.14159;
+
+            static getDiameter(radious){
+                return radious * 2;
+            }
+
+            static getCircumference(radious){
+                return 2 * this.PI * radious;
+            }
+
+            static getArea(radious){
+                return this.PI * radious *radious
+            }
+        }
+
+        myprint("PI: "+MathUtil.PI);
+        myprint("Diameter: "+MathUtil.getDiameter(10));
+        myprint("Circumfrence : "+MathUtil.getCircumference(10));
+        myprint("Area: "+MathUtil.getArea(10));
+
+
+        
+
+    </script>
+    
+</body>
+</html>

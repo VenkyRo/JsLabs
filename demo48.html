@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      #mybut{
+        font-size: 3.5rem;
+        margin: 15px;
+        border: none;
+        border-radius: 10px;
+        padding: 10px 15px;
+      }
+      .enabled{
+        background-color: tomato;
+        color: white;
+      }
+      .hover{
+        background-color: green;
+      }
+      .disbled{
+        background-color: aqua;
+      }
+       
+
+    </style>
+</head>
+<body>
+    <h3 id="myh3"> class List </h3>
+
+  <button id="mybut">mybutton1</button>
+
+  
+
+    <script>
+       
+
+       const mybut = document.getElementById("mybut");
+      // mybut.classList.add("enabled");
+      // mybut.classList.remove("enabled");
+
+      /*
+      mybut.addEventListener("mouseout",event =>{
+        event.target.classList.add("hover");
+      })
+
+      
+      mybut.addEventListener("mouseover",event =>{
+        event.target.classList.add("hover");
+      })
+        */
+
+        mybut.classList.add("enabled");
+        mybut.addEventListener("click",event =>{
+            if(event.target.classList.contains("disbled")){
+                event.target.textContent+="😒"
+            }else{
+            event.target.classList.replace("enabled","disbled");
+            }
+        })
+
+
+    </script>
+    
+</body>
+</html>

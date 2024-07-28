@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div id="mydiv">
+
+    <h3 id="myh3"> element selectors </h3>
+   </div>
+  
+
+    <script>
+        function myprint(data){
+        var mydiv = document.getElementById("mydiv");
+         mydiv.innerHTML=mydiv.innerHTML+data +"<br/>";
+        }
+
+        const myheading = document.getElementById("myh3");
+
+        myheading.style.backgroundColor="red";
+        myheading.style.textAlign="center";
+        myheading.style.padding= "10px";
+       
+    </script>
+    
+</body>
+</html>

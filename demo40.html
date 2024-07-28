@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 id="myh3"> DOM  navigation </h3>
+   <div id="mydiv"></div>
+
+  
+ 
+   <ul id="fruits">
+    <li>apple</li>
+    <li>orange</li>
+    <li>banaa</li>
+   </ul>
+
+ 
+   <ul id="vegtables">
+    <li>boroci</li>
+    <li>celery</li>
+    <li>onions</li>
+   </ul>
+
+   <ul id="deserats">
+    <li>cake</li>
+    <li>pie</li>
+    <li>ice cream</li>
+   </ul>
+
+  
+
+    <script>
+        function myprint(data){
+        var mydiv = document.getElementById("mydiv");
+         mydiv.innerHTML=mydiv.innerHTML+data +"<br/>";
+        }
+
+        const element = document.querySelectorAll("ul");
+       
+        element.forEach(ele =>{
+            const first = ele.firstElementChild;
+            first.style.color = "red";
+        })
+
+       
+
+
+      
+       
+    </script>
+    
+</body>
+</html>

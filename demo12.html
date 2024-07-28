@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="myh1">Filter()</h1>
+
+    <p id="myp1"></p>
+    <p id="myp2"></p>
+    <p id="myp3"></p>
+    
+
+    <script>
+        const ages = [12,39,18,19,20,7,51,76];
+        const adults = ages.filter(isAdult);
+        const children = ages.filter(isChilderen);
+
+        console.log(ages);
+        console.log(adults);
+        console.log(children);
+
+        document.getElementById("myp1").textContent=ages;
+        document.getElementById("myp2").textContent=adults;
+        document.getElementById("myp3").textContent=children;
+
+        function isAdult(element){
+            return element >= 18;
+        }
+
+        function isChilderen(element){
+            return element < 18;
+        }
+
+    </script>
+    
+</body>
+</html>

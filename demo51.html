@@ -1,0 +1,86 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     
+       
+
+    </style>
+</head>
+<body>
+    <h3 id="myh3"> promises & call back hell </h3>
+    <div id="mydiv"> </div>
+
+ 
+    <script>
+
+function myprint(data){
+        var mydiv = document.getElementById("mydiv");
+         mydiv.innerHTML=mydiv.innerHTML+data +"<br/>";
+        }
+        myprint("hello");
+
+        function walkDog(){
+           
+            return new Promise((reslove, reject) =>{
+                setTimeout(() => {
+                    const dogwalked = true;
+                    if(dogwalked){
+
+                        reslove("walk out the dog🐩");
+                    }
+                    else{
+                        redject("you did't wak the dog");
+                    }
+            }, 2000);
+
+            })
+        }
+
+        function cleanKitchen(){
+            return new Promise((reslove, reject) =>{
+                setTimeout(() => {
+                    const cleanKitchen = true;
+                    if(cleanKitchen){
+
+                        reslove("clean the kitchen 🔪🔪")
+                    }
+                    else{
+                        reject("you did't clean the kitchen")
+                    }
+                
+            }, 2500);
+
+            });
+
+        }   
+
+
+
+        function takeOut(){
+           return new Promise ((reslove, redject)=>{
+            setTimeout(() => {
+                const clean = true;
+                if(clean){
+
+                    reslove("Take out the Ttach🚮");
+                }
+                else{
+                    reject("you didn't take out");
+                }
+               
+            }, 2500);
+           })
+        } 
+
+        walkDog().then(value => { myprint(value); return cleanKitchen()})
+                 .then(value =>{myprint(value); return takeOut()})
+                 .then(value =>{myprint(value); myprint("you finsh all work")})
+                 .catch(error =>{console.error(error),myprint(error)});
+       
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div id="mydiv">
+
+    <h3> try , catch  and finally</h3>
+   </div>
+  
+
+    <script>
+        function myprint(data){
+        var mydiv = document.getElementById("mydiv");
+         mydiv.innerHTML=mydiv.innerHTML+data +"<br/>";
+        }
+
+        myprint("start");
+
+        try{
+        //let x = 10/0;
+        myprint(x);
+        }
+        catch(error){
+            myprint(error);
+            console.error(error);
+        }
+
+        finally{
+            myprint("this finally  always execute!!");
+        }
+        myprint("Reach the End");
+      
+    </script>
+    
+</body>
+</html>

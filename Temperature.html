@@ -1,0 +1,108 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature</title>
+    <style>
+        body{
+            background-color: hsl(0, 0%, 90%);
+        }
+
+        h1{
+          color: red;
+          font-weight: bold;
+        }
+        form{
+            
+            background-color:   hsl(0, 0%, 100%);
+            text-align: center;
+            max-width: 300px;
+            margin: auto;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 5px 5px 15px  hsl(0, 0%, 85%);
+        }
+        #textBox{
+            width: 50%;
+            text-align: center;
+            font-size: 2rem;
+            border-radius: 10px;
+            border: 2px solid hsla(0, 64%, 14%, 0.485);
+            margin-bottom: 15px;
+        }
+        label{
+            font-size: l.5em;
+           font-weight: bold;
+        }
+        button{
+            font-size: 1.5rem;
+            background-color: hsl(0, 0%, 70%);
+            border-radius: 5px;
+            cursor: pointer;
+            border: none;
+            padding: 10px 15px;
+        }
+        button:hover{
+            background-color: hsl(0, 0%, 60%);
+            color: white;
+            
+        }
+
+        p{
+            font-size: 1.7em;
+            font-weight: bold;
+        }
+
+
+    </style>
+</head>
+<body>
+    <form >
+        <h1>Temperature Converation</h1>
+        <input type="number" id="textBox"/><br>
+
+       
+        <input type="radio" name="radio" id="Tofareinheat" name="unit">
+        <label for="Tofareinheat"> celsius➡️Fahrenheat</label><br>
+
+        <input type="radio" name="radio" id="ToCeli" name="unit">
+        <label for="ToCeli"> Fahrenheat ⬅️celsius</label><br><br>
+
+       <button type="button" onclick="Convert();">Enter</button>
+
+       <p id="result">Select Unit</p>
+    </form>
+
+    <script>
+                const textBox = document.getElementById("texTBox");
+        const Tofareinheat = document.getElementById("Tofareinheat");
+        const ToCeli = document.getElementById("ToCeli");
+        const result = document.getElementById("result");
+
+        let temp = 0;  
+        console.log("hello");
+        
+        console.log(Tofareinheat.value);
+        console.log(ToCeli.value);
+        console.log(result.value);
+        console.log(textBox.value);
+            
+
+        document.addEventListener('Convert();', function() {
+            
+            if(Tofareinheat.checked){
+                result.textConten="heloo"
+            }
+            else if(ToCeli.checked){
+                result.textConten="heloo"
+            }
+            else{
+                result.textContent="select unit!!!"
+            }
+    
+    
+        });
+
+    </script>
+</body>
+</html>

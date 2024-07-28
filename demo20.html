@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div id="mydiv">
+
+    <h3>Multiple Inheritance:</h3>
+   </div>
+   
+    
+
+    <script>
+        function myprint(data){
+        var mydiv = document.getElementById("mydiv");
+         mydiv.innerHTML=mydiv.innerHTML+data +"<br/>";
+        }
+
+        class Animal{
+            alive = true;
+
+            eat(){
+                myprint(`this ${this.name} is eating`);
+            }
+
+            sleep(){
+                myprint(`this ${this.name} is eating`);
+            }
+        }
+
+        class Rabbit extends Animal{
+            name = "rabbit"
+            likes(){
+                myprint(`this ${this.name} likes Carrot`)
+            }
+        }
+        class Fish extends Animal{
+            name = "fish"
+
+            ocean(){
+                myprint(`this ${this.name} in ocean`)
+            }
+        }
+        class Lion extends Animal{
+            name = "lion"
+
+            forest(){
+                myprint(` this ${this.name} in forest`);
+            }
+        }
+       
+        const lion = new Lion();
+        myprint(lion.alive);
+        lion.eat();
+        lion.sleep();
+
+        lion.ocean();
+
+
+        
+
+    </script>
+    
+</body>
+</html>

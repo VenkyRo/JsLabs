@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div id="mydiv">
+
+    <h3>Class:</h3>
+   </div>
+   
+    
+
+    <script>
+        function myprint(data){
+        var mydiv = document.getElementById("mydiv");
+         mydiv.innerHTML=mydiv.innerHTML+data +"<br/>";
+        }
+
+        class product {
+            constructor(name,price){
+                this.name = name;
+                this.price= price;
+            }
+
+            displayProduct(){
+                myprint(`product : ${this.name}`);
+                myprint(`price :$${this.price.toFixed(2)}`);
+            }
+
+            claculateTotal(salesTax){
+                return this.price + (this.price*salesTax);
+
+            }
+        }
+
+        const salesTax = 0.05;
+
+        const product1 = new product("shirt", 99.00);
+        const product2 = new product("pants", 45.40);
+        const product3 = new product("watche", 100.20);
+
+        const total1 = product1.claculateTotal(salesTax);
+        const total2= product2.claculateTotal(salesTax);
+        const total3 = product3.claculateTotal(salesTax);
+
+        product1.displayProduct();
+        myprint(`Total price (with tax) $${total1.toFixed(2)}`);
+        product2.displayProduct();
+        myprint(`Total price (with tax) $${total2.toFixed(2)}`);
+        product3.displayProduct();
+        myprint(`Total price (with tax) $${total3.toFixed(2)}`);
+
+       
+
+        
+
+    </script>
+    
+</body>
+</html>

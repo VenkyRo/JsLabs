@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            font-size: 25px;
+            color: red;
+            border: 2px solid gray;
+            width: 500px;
+            height:50px;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <label > Enter your age:</label>
+    <input type="text" id="mytext"/><br><br>
+    <button onclick="Vote();" type="submit" id="mysubmit">submit</button>
+    <p id="result"></p>
+
+    <script>
+        const text = document.getElementById("mytext");
+        const submit = document.getElementById("mysubmit");
+        const result = document.getElementById("result");
+         function Vote(){
+            age = text.value;
+            age = Number(age);
+            if(age>=18){
+                age = result.textContent = `your eligible for voteing:${age}`;
+            }
+            else{
+                age = result.textContent = `your not eligible for voteing:${age}`;
+            }
+        }
+    </script>
+</body>
+</html>

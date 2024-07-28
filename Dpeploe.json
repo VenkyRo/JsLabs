@@ -1,0 +1,26 @@
+[{
+    "name": "venkatesh",
+    "age": 30,
+    "isStudent": true
+},
+{
+    "name": "veny",
+    "age": 30,
+    "isStudent": false
+},
+{
+    "name": "harish",
+    "age": 30,
+    "isStudent": true
+},{
+    "name": "lokes",
+    "age": 30,
+    "isStudent": false
+},
+{
+    "name": "jagadesh",
+    "age": 30,
+    "isStudent": false
+}
+
+]

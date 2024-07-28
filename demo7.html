@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <label>Please Subscribe!!</label><br>
+
+    <input type="checkbox" name="checkbox" id="checkbox"/>
+    <label for="checkbox">Subscribe</label><br><br>
+
+    <label >select Your payment Method</label><br>
+
+    <input type="radio" name="radio" id="PhonePay">
+    <label for="PhonePay">PhonePay</label><br>
+
+    <input type="radio" name="radio" id="GogolePay">
+    <label for="GogolePay">GooglePay</label><br>
+
+    <input type="radio" name="radio" id="Paytm">
+    <label for="Paytm">Paytm</label><br><br>
+    <button  type="submit" id="submit">submit</button>
+
+    <p id="Subresult">Subscribe!!</p>
+    <p id="PayResult">Yor payment!1</p>
+
+
+
+
+
+    <script>
+        const checkSub = document.getElementById("checkbox");
+        const PhonePay = document.getElementById("phonepay");
+        const GogolePay = document.getElementById("Gogolepay");
+        const Paytm = document.getElementById("paytm");
+        const Subresult = document.getElementById("Subresult");
+        const PayResult = document.getElementById("PayResult")
+        const submit = document.getElementById("submit");
+
+        submit.onclick= function(){
+            if(checkSub.checked){
+                Subresult.textContent=`Your Subscribe!!`;
+            }
+            else{
+                 Subresult.textContent=`Your Not Subscribe!! please Subscribe contniue your payment`;
+            }
+
+            if(PhonePay.Checked){
+               PayResult.textContent = `Slect payment PhonePay`;
+            }
+
+            else if(GogolePay.checked){
+                PayResult.textContent = `Slect payment googlePay`;
+            }
+
+            else if(Paytm.checked){
+                PayResult.textContent = `Slect payment paytm`;
+            }
+            else{
+                 PayResult.textContent='you must be select your payment';
+            }
+        }
+       
+    </script>
+</body>
+</html>

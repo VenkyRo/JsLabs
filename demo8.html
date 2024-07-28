@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Enter Text</h1>
+
+        <input type="number" id="textBox" placeholder="Enter Text"><br><br>
+
+        <button onclick="Lines();"  type="button">Submit</button>
+        <p id="result"> something</p>
+
+    </div>
+    <script>
+
+        const Text = document.getElementById("textBox");
+        const result = document.getElementById("result");
+        console.log(Text);
+        text = Number(Text);
+        console.log(typeof text);
+
+        function Lines(){
+            text = Number(text);
+            result.textContent= text;
+            console.log(text);
+        }
+
+    </script>
+</body>
+</html>

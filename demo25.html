@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div id="mydiv">
+
+    <h3> closure outer & inner method</h3>
+   </div>
+   
+    
+
+    <script>
+        function myprint(data){
+        var mydiv = document.getElementById("mydiv");
+         mydiv.innerHTML=mydiv.innerHTML+data +"<br/>";
+        }
+
+        function createCounter(){
+            let count = 0;
+            function increment(){
+                count++;
+                myprint(`count incresed to ${count}`)
+            }
+            function getCount(){
+           
+                return count;
+            }
+            return{ increment,getCount};
+        }
+        const counter = createCounter();
+        counter.increment();
+        counter.increment();
+        counter.increment();
+        counter.increment();
+        counter.increment();
+
+        myprint(` the current count is ${counter.getCount()}`);
+
+      
+    </script>
+    
+</body>
+</html>

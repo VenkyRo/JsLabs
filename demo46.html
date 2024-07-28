@@ -1,0 +1,81 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myBox{
+            background-color: aqua;
+            width: 150px;
+            height: 150px;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            display: flex;
+            font-size: 6.0rem;
+            position: relative;
+        }
+       
+
+    </style>
+</head>
+<body>
+    <h3 id="myh3"> EventListener </h3>
+
+    <div id="myBox">😊</div><br>
+  
+
+  
+
+    <script>
+        function myprint(data){
+        var mydiv = document.getElementById("mydiv");
+         mydiv.innerHTML=mydiv.innerHTML+data +"<br/>";
+        }
+
+
+
+
+        const myBox = document.getElementById("myBox");
+        const moveAmount = 10;
+        let x = 0;
+        let y = 0;
+
+        document.addEventListener("keydown",event =>{
+            myBox.textContent = "😘";
+            myBox.style.backgroundColor = "red";
+        })
+
+        document.addEventListener("keyup",event =>{
+            myBox.textContent = "😊";
+            myBox.style.backgroundColor = "blue";
+        })
+
+        document.addEventListener("keydown", event =>{
+            if (event.key.startsWith("Arrow")) {
+                event.preventDefault();
+                switch(event.key){
+                    case "ArrowUp": y-=moveAmount;
+                    break;
+
+                    case "ArrowDown": y+=moveAmount;
+                    break;
+
+                    case "ArrowRight": x+=moveAmount;
+                    break;
+
+                    case "ArrowLeft": x-=moveAmount;
+                    break;
+                }
+
+                myBox.style.top= `${y}px`;
+                myBox.style.left= `${x}px`;
+                
+            }
+        })
+
+       
+    </script>
+    
+</body>
+</html>

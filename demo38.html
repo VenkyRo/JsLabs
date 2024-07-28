@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 id="myh3"> element selectors by QuerySelector </h3>
+   <div id="mydiv"></div>
+
+   <div class="fruits">Apple</div>
+   <div class="fruits">banana</div>
+   <div class="fruits">Organge</div>
+
+   <h4>Root vegetabels</h4>
+   <ul>
+    <li>beets</li>
+    <li>carrots</li>
+    <li>potatoes</li>
+   </ul>
+
+   <h4> Non-Root vegetabels</h4>
+   <ul>
+    <li>boroci</li>
+    <li>celery</li>
+    <li>onions</li>
+   </ul>
+  
+
+    <script>
+        function myprint(data){
+        var mydiv = document.getElementById("mydiv");
+         mydiv.innerHTML=mydiv.innerHTML+data +"<br/>";
+        }
+
+      const furit = document.querySelector("ul");
+      furit.style.color = "red";
+
+      const furi = document.querySelector("li");
+      furi.style.color = "green";
+
+
+      
+       
+    </script>
+    
+</body>
+</html>

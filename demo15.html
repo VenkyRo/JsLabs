@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div id="mydiv">
+
+    <h3>Arrow functions:</h3>
+   </div>
+   
+    
+
+    <script>
+        function myprint(data){
+        var mydiv = document.getElementById("mydiv");
+         mydiv.innerHTML=mydiv.innerHTML+data +"<br/>";
+        }
+
+        const numbers = [1,2,4,5,6,7,8];
+
+        myprint( "orgiginal : "+numbers)
+        const squres = numbers.map((element ) => Math.pow(element,2));
+        myprint("squres:"+squres);
+
+        const quebes  = numbers.map((element ) => Math.pow(element,3));
+        myprint("cubes:"+quebes);
+
+        const evenNUms = numbers.filter((element ) => element % 2 === 0);
+        myprint("even:"+evenNUms);
+
+        const oddNUms = numbers.filter((element ) => element % 2 !== 0);
+        myprint("even:"+oddNUms);
+
+        const total = numbers.reduce( (auucmulat , element) => auucmulat + element);
+        myprint("total :"+total);
+        
+
+    </script>
+    
+</body>
+</html>

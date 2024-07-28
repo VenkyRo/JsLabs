@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myBox{
+            background-color: aqua;
+            width: 150px;
+            height: 150px;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            display: flex;
+            cursor: pointer;
+            font-size: 2.0rem;
+        }
+
+    </style>
+</head>
+<body>
+    <h3 id="myh3"> EventListener </h3>
+
+    <div id="myBox">Click Me😊</div>
+  
+
+    <script>
+        function myprint(data){
+        var mydiv = document.getElementById("mydiv");
+         mydiv.innerHTML=mydiv.innerHTML+data +"<br/>";
+        }
+
+        const myBox = document.getElementById("myBox");
+
+
+        myBox.addEventListener("click", event =>{
+            event.target.style.backgroundColor = "red";
+            event.target.textContent = "OPPs!😒";
+        })
+
+        myBox.addEventListener("mouseover", event =>{
+            event.target.style.backgroundColor = "yellow";
+            event.target.textContent = "don't it😘";
+        })
+
+        myBox.addEventListener("mouseout", event =>{
+            event.target.style.backgroundColor = "goldenrod";
+            event.target.textContent = "Clikc Me😊";
+        })
+
+
+
+
+
+       
+
+
+      
+       
+    </script>
+    
+</body>
+</html>

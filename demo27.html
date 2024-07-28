@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div id="mydiv">
+
+    <h3> Set Time Date method</h3>
+   </div>
+   <button onclick="startTimer()">Start</button>
+   <button onclick="clearTimer()">Clear</button>
+
+    <script>
+        function myprint(data){
+        var mydiv = document.getElementById("mydiv");
+         mydiv.innerHTML=mydiv.innerHTML+data +"<br/>";
+        }
+
+        let timeOutId;
+        function startTimer(){
+            timeOutId = setTimeout(() =>  window.alert("hello"), 3000);
+            myprint("start")
+        }
+        function clearTimer(){
+            clearTimeout(timeOutId);
+            myprint("clear")
+        }
+
+      
+    </script>
+    
+</body>
+</html>

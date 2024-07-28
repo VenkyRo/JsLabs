@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div id="mydiv">
+
+    <h3> closure outer & inner method</h3>
+   </div>
+   
+    
+
+    <script>
+        function myprint(data){
+        var mydiv = document.getElementById("mydiv");
+         mydiv.innerHTML=mydiv.innerHTML+data +"<br/>";
+        }
+
+       function game(){
+        let score = 0;
+        function increseScore(points){
+            score += points;
+            myprint(`add+${points}pts`);
+        }
+
+        function decreseScore(points){
+            score -= points;
+            myprint(`sub-${points}pts`)
+        }
+
+        function getScore(){
+            return score;
+
+        }
+        return {increseScore,decreseScore,getScore}
+       }
+
+       const gm = game();
+       gm.increseScore(10);
+       gm.increseScore(3);
+       gm.decreseScore(3);
+       gm.decreseScore(2);
+
+       myprint(`The final score is ${gm.getScore()}pts`);
+      
+    </script>
+    
+</body>
+</html>

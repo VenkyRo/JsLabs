@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div id="mydiv">
+
+    <h3>Arrow functions:</h3>
+   </div>
+   
+    
+
+    <script>
+        function myprint(data){
+        var mydiv = document.getElementById("mydiv");
+         mydiv.innerHTML=mydiv.innerHTML+data +"<br/>";
+         }
+        const hello = (name,age) => {
+            console.log(`hello ${name}`);
+            myprint(`hello ${name}`)
+            myprint(`your ${age} years old`)
+
+        }
+       hello("venkatesh",23);
+
+    </script>
+    
+</body>
+</html>

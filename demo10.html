@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="myh1">Sum!!</h1>
+
+    <script>
+        let a = 5;
+        let b = 5
+
+        sum(displayPage,a,b);
+
+        function sum(callback, x,y){
+
+            let result = x+y;
+            callback(result);
+        }
+
+        function diplayConsole(result){
+            console.log(result);
+        }
+
+        function displayPage(result){
+            document.getElementById("myh1").textContent=`Sum of Two ${a} + ${b} : ${result}`;
+        }
+    </script>
+    
+</body>
+</html>

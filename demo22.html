@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div id="mydiv">
+
+    <h3>Sort method</h3>
+   </div>
+   
+    
+
+    <script>
+        function myprint(data){
+        var mydiv = document.getElementById("mydiv");
+         mydiv.innerHTML=mydiv.innerHTML+data +"<br/>";
+        }
+
+        
+
+        const pepole = [{name:"venkatesh", age:21,gpa:3.0},
+                        {name:"venky",age:22 , gpa :4.0},
+                        {name:"vkRoya",age:26 , gpa :9.0},
+                        {name:"Royal",age:29 , gpa :9.0}]
+
+
+        
+
+        pepole.sort((a,b) => a.name - b.name);
+        myprint(pepole);
+        console.log(pepole);
+    </script>
+    
+</body>
+</html>
